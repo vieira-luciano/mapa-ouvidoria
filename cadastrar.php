@@ -7,6 +7,7 @@
 
     if (empty($dados['nome'])){
         echo "Preencha seu nome";
+        exit();
     }
     $email = $dados['email'];
     $cpf = $dados['cpf'];
@@ -26,6 +27,7 @@
     $mensagem = $dados['mensagem'];
     if (empty($dados['mensagem'])){
         echo "Preencha seu mensagem";
+        exit();
     }
 
 
@@ -39,7 +41,7 @@
 
 
     $sql = "INSERT INTO ouvidoria (protocolo, nome, cpf, rg, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pais, telefone_ddd, telefone_numero, celular_ddd, celular_numero, mensagem)
-    VALUES ('acb123', '$nome', '$cpf', '$rg', '$email', '$cep', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$uf', '$pais', '$telefone_ddd', '$telefone_numero', '$celular_ddd', '$celular_numero', '$mensagem' )";
+    VALUES ('Yanpapapa', '$nome', '$cpf', '$rg', '$email', '$cep', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$uf', '$pais', '$telefone_ddd', '$telefone_numero', '$celular_ddd', '$celular_numero', '$mensagem' )";
 
     if ($mysqli->query($sql) === TRUE) {
         echo "Dados inseridos com sucesso!";
